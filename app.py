@@ -337,3 +337,6 @@ def show_timer():
 def pizza_done():
     response = requests.post(f"http://{smart_oven_ip}:5000/get-data", json = {'mode' : 'done'})
     return render_template("pizza done.html")
+
+if __name__ == "__main__":
+    app.run()
